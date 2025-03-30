@@ -54,8 +54,8 @@ const Quote = styled(motion.div)`
 
 const ImageContainer = styled(motion.div)`
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
@@ -63,8 +63,8 @@ const ImageContainer = styled(motion.div)`
   box-shadow: 0 0 20px rgba(255, 167, 249, 0.15);
 
   @media (max-width: 768px) {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
   }
 `;
 
