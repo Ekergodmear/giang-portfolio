@@ -54,20 +54,32 @@ const Quote = styled(motion.div)`
 
 const ImageContainer = styled(motion.div)`
   position: relative;
-  width: 100%;
-  padding-top: 100%;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 0 30px rgba(255, 167, 249, 0.3);
+  background: linear-gradient(45deg, rgba(255, 247, 173, 0.2), rgba(255, 169, 249, 0.2));
+  box-shadow: 0 0 20px rgba(255, 167, 249, 0.15);
+
+  @media (max-width: 768px) {
+    width: 250px;
+    height: 250px;
+  }
 `;
 
 const ProfileImage = styled.img`
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: 3px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const SVGPath = styled(motion.svg)`
@@ -165,4 +177,4 @@ const AboutMe: React.FC = () => {
   );
 };
 
-export default AboutMe; 
+export default AboutMe;
