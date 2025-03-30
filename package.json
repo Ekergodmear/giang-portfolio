@@ -2,7 +2,7 @@
   "name": "giang-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://[your-github-username].github.io/giang-portfolio",
+  "homepage": "https://Ekergodmear.github.io/giang-portfolio",
   "dependencies": {
     "@tsparticles/engine": "3.8.1",
     "@tsparticles/react": "3.0.0",
