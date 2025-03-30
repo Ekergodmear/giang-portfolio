@@ -61,14 +61,13 @@ const ImageContainer = styled(motion.div)`
   box-shadow: 0 0 30px rgba(255, 167, 249, 0.3);
 `;
 
-const ProfileImage = styled(motion.img)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+const ProfileImage = styled.img`
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 `;
 
 const SVGPath = styled(motion.svg)`
@@ -130,16 +129,14 @@ const AboutMe: React.FC = () => {
         </Content>
 
         <ImageContainer
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <ProfileImage
-            src="/assets/profile.jpg"
-            alt="Giang Nguyen"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
+          <ProfileImage 
+            src={process.env.PUBLIC_URL + '/assets/profile.jpg'} 
+            alt="Profile" 
           />
           <SVGPath
             viewBox="0 0 100 100"

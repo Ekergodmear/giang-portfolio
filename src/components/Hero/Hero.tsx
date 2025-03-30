@@ -76,6 +76,12 @@ const ContactInfo = styled(motion.div)`
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 `;
 
+const BackgroundVideo = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
 const Hero = () => {
   const nameRef = useRef<HTMLHeadingElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -181,9 +187,10 @@ const Hero = () => {
   return (
     <HeroSection>
       <VideoBackground>
-        <video autoPlay loop muted playsInline>
-          <source src="/assets/tech-background.mp4" type="video/mp4" />
-        </video>
+        <BackgroundVideo autoPlay loop muted playsInline>
+          <source src={process.env.PUBLIC_URL + '/assets/tech-background.mp4'} type="video/mp4" />
+          Your browser does not support the video tag.
+        </BackgroundVideo>
       </VideoBackground>
 
       <ParticlesContainer id="tsparticles" ref={particlesRef} />
